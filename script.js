@@ -79,6 +79,6 @@ function decodificarTexto(textoCodificado) {
   return textoCodificado;
 }
 
-function esTextoValido (texto) {
+function esTextoValido(texto) {
 return /^[a-z]+$/.test(texto);
 }
