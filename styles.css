@@ -371,10 +371,9 @@ a{
 .input2 {
   width: 400px;
   margin-top: 50px;
-  margin: 0 auto;
   height: 133px;
   border: none;
-  margin-left: 20px;
+  margin-left: 50px;
   outline: none;
   font-family: "Inter", sans-serif;
   font-weight: 400;
