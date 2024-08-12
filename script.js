@@ -7,21 +7,22 @@ const decodificarBoton = document.getElementById("descodificar");
 
 codificarBoton.addEventListener("click", () => {
   const texto = input.value.trim();
-  if (texto !== "") {
+  if (texto !== "" && esTextoValido(texto)) {
     const codificado = codificarTexto(texto);
     mostrarResultado(codificado);
-  }
-});
+  } else { alert("Por favor, ingresa solo letras sin simbolos.");
+}});
 
 decodificarBoton.addEventListener("click", () => {
   const textoCodificado = input.value.trim();
-  if (textoCodificado !== "") {
+  if (textoCodificado !== "" && esTextoValido(textoCodificado)) {
     const descodificado = decodificarTexto(textoCodificado);
     mostrarResultado(descodificado);
-  } else {
+  } else if {
+    alert("Por favor, ingrese solo letras minùsculas sin sìmbolos.");
+} else {
     alert("No hay texto codificado para desencriptar.");
-  }
-});
+  }});
 
 function mostrarResultado(resultado) {
   if (resultado) {
@@ -60,7 +61,7 @@ function codificarTexto(texto) {
   };
   return texto
     .split("")
-    .map((char) => vocales[char.toLowerCase()] || char)
+    .map((char) => vocales[char] || char)
     .join("");
 }
 
@@ -76,4 +77,8 @@ function decodificarTexto(textoCodificado) {
     textoCodificado = textoCodificado.replaceAll(codificar, vocales[codificar]);
   }
   return textoCodificado;
+}
+
+function esTextoValido (texto) {
+return /^[a-z]+$/.test(texto);
 }
