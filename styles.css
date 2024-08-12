@@ -89,15 +89,16 @@ a{
   color: #0a3871;
 }
 
+/*--- ADVERTENCIA ---*/
+
+
 .adv-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
-.adv-text {
-height: 16px;
-color: black;
-}
 .advertencia {
   height: 16px;
   width: 16px;
@@ -109,6 +110,11 @@ color: black;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 10px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28.8px;
 }
 
 /*---imagen---*/
