@@ -93,6 +93,11 @@ a{
   display: flex;
   align-items: center;
 }
+
+. adv-text {
+height: 16px;
+color: black;
+}
 .advertencia {
   height: 16px;
   width: 16px;
