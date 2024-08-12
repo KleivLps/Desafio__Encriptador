@@ -374,6 +374,7 @@ a{
   margin: 0 auto;
   height: 133px;
   border: none;
+  margin-left: 20px;
   outline: none;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -450,7 +451,7 @@ a{
     width: 320px;
     margin-top: 50px;
     margin: 0 auto;
-    margin-left: 10px;
+    margin-left: 20px;
     height: 133px;
     border: none;
     outline: none;
