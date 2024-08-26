@@ -14,12 +14,22 @@ codificarBoton.addEventListener("click", () => {
  alert("Por favor, ingrese solo letras minúsculas sin símbolos.");
 }});
 
+codificarBoton.addEventListener("click", () => {
+  const texto = input.value.trim().replace(/\s+/g, ''); 
+  
+});
+
 decodificarBoton.addEventListener("click", () => { 
  const textoCodificado = input.value.trim(); 
  if (textoCodificado !== "" && esTextoValido(textoCodificado)) {  
   const descodificado = decodificarTexto(textoCodificado);    mostrarResultado(descodificado);  
 } else { 
    alert("Por favor, ingrese solo letras minúsculas sin símbolos.");  }});
+
+decodificarBoton.addEventListener("click", () => {
+  const textoCodificado = input.value.trim().replace(/\s+/g, '');
+  ...
+});
 
 function mostrarResultado(resultado) {
   if (resultado) {
@@ -77,5 +87,5 @@ function decodificarTexto(textoCodificado) {
 }
 
 function esTextoValido(texto) {
-return /^[a-z]+$/.test(texto);
+  return /^[a-z\s]+$/.test(texto);
 }
