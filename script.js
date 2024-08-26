@@ -8,27 +8,21 @@ const decodificarBoton = document.getElementById("descodificar");
 codificarBoton.addEventListener("click", () => {
   const texto = input.value.trim();
   if (texto !== "" && esTextoValido(texto)) { 
-     const codificado = codificarTexto(texto); 
-     mostrarResultado(codificado);
+    const codificado = codificarTexto(texto); 
+    mostrarResultado(codificado);
   } else {   
- alert("Por favor, ingrese solo letras minúsculas sin símbolos.");
-}});
-
-codificarBoton.addEventListener("click", () => {
-  const texto = input.value.trim().replace(/\s+/g, ''); 
-  
+    alert("Por favor, ingrese solo letras minúsculas sin símbolos.");
+  }
 });
 
 decodificarBoton.addEventListener("click", () => { 
- const textoCodificado = input.value.trim(); 
- if (textoCodificado !== "" && esTextoValido(textoCodificado)) {  
-  const descodificado = decodificarTexto(textoCodificado);    mostrarResultado(descodificado);  
-} else { 
-   alert("Por favor, ingrese solo letras minúsculas sin símbolos.");  }});
-
-decodificarBoton.addEventListener("click", () => {
-  const textoCodificado = input.value.trim().replace(/\s+/g, '');
-  ...
+  const textoCodificado = input.value.trim(); 
+  if (textoCodificado !== "" && esTextoValido(textoCodificado)) {  
+    const descodificado = decodificarTexto(textoCodificado);    
+    mostrarResultado(descodificado);  
+  } else { 
+    alert("Por favor, ingrese solo letras minúsculas sin símbolos.");  
+  }
 });
 
 function mostrarResultado(resultado) {
